@@ -1,108 +1,101 @@
-LoRa Chat Project
-Overview
-This repository contains the Arduino code and documentation for our group's LoRa communication experiment conducted as part of Assignment 003: Experimenting with LoRa. The goal of the experiment was to test the range and reliability of LoRa communication using LoRa32u4 II (BSFrance) modules, with one group acting as a stationary base station and the other as a mobile node. The experiment was conducted on May 30, 2025 [REPLACE WITH YOUR EXPERIMENT DATE], and we successfully communicated at a distance of 500 meters [REPLACE WITH YOUR DISTANCE] at the coordinates 40.7128, -74.0060 [REPLACE WITH YOUR COORDINATES].
-Hardware Requirements
+# LoRa Chat Project
 
-LoRa32u4 II (BSFrance): Two modules, one for the sender and one for the receiver.
-Antenna: Compatible with 915 MHz [REPLACE WITH YOUR REGION’S FREQUENCY, e.g., 868 MHz for Europe].
-USB Cable: For programming and powering the LoRa32u4 II modules.
-Computer: With Arduino IDE installed for uploading code.
-Optional: Battery pack for mobile node testing in the field.
+## Overview
 
-Software Requirements
+This repository contains the Arduino code and documentation for our group's **LoRa communication experiment** conducted as part of Assignment **003: Experimenting with LoRa**. The goal of the experiment was to test the range and reliability of LoRa communication using LoRa32u4  modules, with one group acting as a stationary base station and the other as a mobile node.
 
-Arduino IDE: Version 2.3.2 or later.
-Adafruit AVR Boards: Install via Arduino IDE Boards Manager using the URL https://adafruit.github.io/arduino-board-index/package_adafruit_index.json.
-RadioHead Library: Install via Arduino IDE Library Manager (search for "RadioHead").
-Git: For cloning and pushing to this repository.
+- **Experiment Date:** May 29, 2025 
+- **Communication Distance:** 71.81 meters
+- **Coordinates:**  -1.6018040425775748, 29.51636611011121
 
-Setup Instructions
+## Hardware Requirements
 
-Install Arduino IDE:
-Download and install from arduino.cc.
+- **LoRa32u4 :** Two modules (one for sender and one for receiver)
+- **Antenna:** Compatible with 915 MHz
+- **USB Cable:** For programming and powering the modules
+- **Computer:** With Arduino IDE installed
 
+## Software Requirements
 
-Add Board Support:
-In Arduino IDE, go to File > Preferences.
-Add https://adafruit.github.io/arduino-board-index/package_adafruit_index.json to Additional Boards Manager URLs.
-Go to Tools > Board > Boards Manager, search for "Adafruit AVR Boards," and install.
+- **Arduino IDE:** Version 2.3.2 or later
+- **Adafruit AVR Boards:**  
+  Install via Arduino IDE Boards Manager using the URL:  
+  `https://adafruit.github.io/arduino-board-index/package_adafruit_index.json`
+- **RadioHead Library:**  
+  Install via Arduino IDE Library Manager (search for "RadioHead")
+- **Git:** For cloning and pushing to this repository
 
+## Setup Instructions
 
-Install RadioHead Library:
-In Arduino IDE, go to Sketch > Include Library > Manage Libraries.
-Search for "RadioHead" and install.
+### 1. Install Arduino IDE
 
+Download and install the Arduino IDE from [arduino.cc](https://www.arduino.cc).
 
-Connect Hardware:
-Connect the LoRa32u4 II module to your computer via USB.
-Attach the antenna to ensure proper signal transmission.
+### 2. Add Board Support
 
+1. Open Arduino IDE and navigate to **File > Preferences**.
+2. Add the following URL to **Additional Boards Manager URLs**:  
+   `https://adafruit.github.io/arduino-board-index/package_adafruit_index.json`
+3. Go to **Tools > Board > Boards Manager**, search for **"Adafruit AVR Boards"**, and install.
 
-Upload Code:
-Open sender.ino and receiver.ino from this repository in the Arduino IDE.
-Select Tools > Board > Adafruit Feather 32u4.
-Set the frequency to 915.0 [REPLACE WITH YOUR REGION’S FREQUENCY, e.g., 868.0 for Europe] in both sketches.
-Upload sender.ino to one module and receiver.ino to the other.
+### 3. Install RadioHead Library
 
+1. In Arduino IDE, go to **Sketch > Include Library > Manage Libraries**.
+2. Search for **"RadioHead"** and install.
 
-Test Communication:
-Power both modules.
-Open the Serial Monitor (Tools > Serial Monitor, 9600 baud) to view messages on the receiver.
-Move the mobile node (sender) to test the communication range.
+### 4. Connect Hardware
 
+- Connect the LoRa32u4 II module to your computer via USB.
+- Attach the antenna to ensure proper signal transmission.
 
+### 5. Upload Code
 
-Project Structure
+- Open **lora_chat.ino**  in the Arduino IDE.
+- Select **Tools > Board > Adafruit Feather 32u4**.
+- Set the frequency to `915.0`
 
-sender.ino: Arduino sketch for the LoRa sender (mobile node).
-receiver.ino: Arduino sketch for the LoRa receiver (base station).
-README.md: This file, documenting the project.
+### 6. Test Communication
 
-Experiment Details
+- **Power Both Modules:** Power on the sender and receiver.
+- **Monitor Serial Output:** Use Serial Monitor from **Tools > Serial Monitor** at **115200 baud** to view messages.
+- **Experiment:** Move the mobile node (sender) to test the communication range.
 
-Objective: Test the range of LoRa communication between two LoRa32u4 II modules.
-Setup: One group remained stationary at 40.7128, -74.0060 [REPLACE WITH BASE STATION COORDINATES], acting as the receiver (base station). The other group moved with the sender to test the maximum communication range.
-Final Successful Communication:
-Coordinates: 40.7128, -74.0060 [REPLACE WITH MOBILE NODE COORDINATES FROM GOOGLE MAPS]
-Distance: 500 meters [REPLACE WITH DISTANCE MEASURED USING GOOGLE MAPS]
+## Project Structure
 
+- **lora_chat.ino:** Arduino sketch for the LoRa chatting
+- **README.md:** This documentation file
 
-Frequency Used: 915 MHz [REPLACE WITH YOUR FREQUENCY, e.g., 868 MHz for Europe].
-Environment: Urban setting with buildings and trees as obstacles [REPLACE WITH YOUR ENVIRONMENT DESCRIPTION, e.g., rural, campus].
+## Experiment Details
 
-Usage
+- **Objective:** Test the range of LoRa communication between two modules
+- **Setup:**  
+  - The receiver (base station) remained stationary at 40.7128, -74.0060 
+  - The sender (mobile node) was moved to test the maximum communication range.
+- **Final Successful Communication:**  
+  - **Coordinates:**  -1.6018040425775748, 29.51636611011121
+  - **Distance:** 72.81
 
-Run the Receiver:
-Upload receiver.ino to the stationary LoRa32u4 II module.
-Open the Serial Monitor to view incoming messages.
+- **Frequency Used:** 915 MHz 
+- **Environment:** Urban setting with buildings and trees as obstacles 
 
+## Usage
 
-Run the Sender:
-Upload sender.ino to the mobile LoRa32u4 II module.
-The sender transmits "Hello LoRa!" every 5 seconds.
+### Run the Receiver
 
-
-Measure Range:
-Move the sender away from the receiver while monitoring the Serial Monitor.
-Record the final location and distance where communication is successful using Google Maps’ “Measure Distance” feature (right-click > Measure Distance).
-
-
-Analyze Results:
-Document the coordinates and distance of the last successful communication point.
+1. Upload **lora_chat.ino** to the stationary LoRa32u4 II module.
+2. Open the Serial Monitor to view incoming messages.
 
 
+### Measure Range
 
-Contributors
+- Move the sender away from the receiver while monitoring the Serial Monitor.
+- Record the final location and distance using Google Maps’ “Measure Distance” feature (right-click > Measure Distance).
 
-Wilson Bugiri (goal651) []
-Group Member 1 ([username1]) [REPLACE WITH NAME AND GITHUB USERNAME]
-Group Member 2 ([username2]) [REPLACE WITH NAME AND GITHUB USERNAME]
+### Analyze Results
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Acknowledgments
+- Document the coordinates and distance of the last successful communication point.
 
-Thanks to our instructor and group members for their support during the experiment.
-RadioHead library by Mike McCauley for simplifying LoRa communication.
-Adafruit for providing board support for the LoRa32u4 II.
+## Contributors
+- **BUGIRI Wilson Goal** ([GitHub](https://github.com/goal651))
+
 

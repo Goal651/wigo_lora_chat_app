@@ -94,7 +94,7 @@ Document the coordinates and distance of the last successful communication point
 
 Contributors
 
-Wilson Bugiri (bugiriwilson651) [REPLACE WITH YOUR GITHUB USERNAME]
+Wilson Bugiri (goal651) []
 Group Member 1 ([username1]) [REPLACE WITH NAME AND GITHUB USERNAME]
 Group Member 2 ([username2]) [REPLACE WITH NAME AND GITHUB USERNAME]
 

@@ -98,6 +98,7 @@ Download and install the Arduino IDE from [arduino.cc](https://www.arduino.cc).
 ## Contributors
 - **BUGIRI Wilson Goal** ([GitHub](https://github.com/goal651))
 - **Iyamuremye Ishimwe Sergine** ([GitHub](https://github.com/Sergine-ops))
+-  **Irisa Giramata Kellia** ([GitHub](https://github.com/irisakellia))
 
 
 
